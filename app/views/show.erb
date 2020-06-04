@@ -1,0 +1,10 @@
+<h1>Artist Spotlight</h1>
+<h2><%= @artist.name %>, <%= @artist.age%></h2>
+<p><%=@artist.bio%></p>
+
+<!-- think about maybe putting an input to edit here as well? -->
+
+<form action="/artists/<%= @artist.id %>" method="post">
+  <input id="hidden" type="hidden" name="_method" value="delete">
+  <input type="submit" value="Delete">
+</form>

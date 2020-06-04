@@ -1,0 +1,13 @@
+<%# An index page that displays the names of all the artists in your database.
+A nice to have feature: On the index page, clicking on the name of the artist would link me to their show page (see below). %>
+
+<h2>Artists</h2>
+<ul>
+  <%@artists.each do |artist|%>
+    <li>
+      <a href="/artists/<%=artist.id%>">
+        <%= artist.name %>
+      </a>
+    </li>
+  <%end%>
+</ul>
